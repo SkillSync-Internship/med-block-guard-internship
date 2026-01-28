@@ -2,11 +2,9 @@ import requests
 import pandas as pd
 import os
 
-# create data directory if not exists
 os.makedirs('../data', exist_ok=True)
 
 def fetch_clinical_trials(query="diabetes", max_results=10):
-    # api v2 endpoint
     base_url = "https://clinicaltrials.gov/api/v2/studies"
     params = {
         "query.term": query,
@@ -19,7 +17,6 @@ def fetch_clinical_trials(query="diabetes", max_results=10):
         data = response.json()
         studies = data.get('studies', [])
         
-        # simple parsing logic
         trial_list = []
         for s in studies:
             protocol = s.get('protocolSection', {})
