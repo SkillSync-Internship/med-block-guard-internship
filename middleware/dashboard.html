@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Med-Block-Guard | Ledger</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #ffffff; color: #333; margin: 40px; }
+        h1 { color: #008080; border-bottom: 2px solid #008080; padding-bottom: 10px; font-weight: 300; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { text-align: left; background: #f4f4f4; padding: 12px; border-bottom: 2px solid #ccc; color: #666; font-size: 0.9rem; text-transform: uppercase; }
+        td { padding: 12px; border-bottom: 1px solid #eee; font-size: 0.85rem; }
+        code { background: #f9f9f9; padding: 2px 4px; color: #d63384; border: 1px solid #eee; }
+        
+        .badge { font-weight: bold; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.5px; }
+        .verified { color: #008080; }
+        .tampered { color: #ff4444; }
+        .low-risk { color: #008080; border: 1px solid #008080; padding: 2px 6px; }
+        .high-risk { color: #f39c12; border: 1px solid #f39c12; padding: 2px 6px; }
+    </style>
+</head>
+<body>
+    <h1>MED-BLOCK-GUARD // SYSTEM LEDGER</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>NCT ID</th>
+                <th>Trial Title</th>
+                <th>Integrity Hash</th>
+                <th>Bias Risk (ML)</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="ledger-content">
+            </tbody>
+    </table>
+
+    <script>
+        async function fetchLedger() {
+            try {
+                const res = await fetch('http://127.0.0.1:8000/all-trials');
+                const data = await res.json();
+                const container = document.getElementById('ledger-content');
+                
+                container.innerHTML = Object.entries(data).map(([id, trial]) => `
+                    <tr>
+                        <td>${id}</td>
+                        <td>${trial.title}</td>
+                        <td><code>${trial.hash.substring(0, 16)}...</code></td>
+                        <td>
+                            <span class="badge ${trial.bias_risk === 'high risk' ? 'high-risk' : 'low-risk'}">
+                                ${trial.bias_risk || 'LOW RISK'}
+                            </span>
+                        </td>
+                        <td class="badge ${trial.status === 'Verified' ? 'verified' : 'tampered'}">
+                            ${trial.status}
+                        </td>
+                    </tr>
+                `).join('');
+            } catch (err) {
+                console.error("Connection to API failed.");
+            }
+        }
+        
+        fetchLedger();
+        setInterval(fetchLedger, 5000); 
+    </script>
+</body>
+</html>
