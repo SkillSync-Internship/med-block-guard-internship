@@ -110,18 +110,24 @@ python verify_integrity.py
 ## 👨‍💻 **Authors**
 
 ### **Fragan Dsouza**  
-🎓 3rd Year B.E. in Computer Science Engineering  
+🎓 3rd Year B.Tech. in Computer Science Engineering  
 🏫 NMAM Institute of Technology  
+💼 Intern @ **Thaniya Technologies** 🔗 [LinkedIn](https://linkedin.com/in/fragan-dsouza) | 🔗 [GitHub](https://github.com/fragan7dsouza)
 
 ### **Hariharanath**  
-🎓 3rd Year B.E. in Computer Science & Engineering (Full Stack Development)  
+🎓 3rd Year B.Tech. in Computer Science & Engineering (Full Stack Development)  
 🏫 NMAM Institute of Technology  
+💼 Intern @ **Thaniya Technologies**
 
 ### **Pratham B Shetty**  
-🎓 3rd Year B.E. in Computer Science & Engineering (Full Stack Development)  
+🎓 3rd Year B.Tech. in Computer Science & Engineering (Full Stack Development)  
 🏫 NMAM Institute of Technology  
+💼 Intern @ **Thaniya Technologies**
 
-💼 Intern @ **Thaniya Technologies** 🔗 [LinkedIn](https://linkedin.com/in/fragan-dsouza) | 🔗 [GitHub](https://github.com/fragan7dsouza)
+### **Anup C**  
+🎓 3rd Year B.Tech. in Computer Science & Engineering (Full Stack Development)  
+🏫 NMAM Institute of Technology <br>
+💼 Intern @ **Thaniya Technologies**
 
 ---
 
