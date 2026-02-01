@@ -112,7 +112,8 @@ python verify_integrity.py
 ### **Fragan Dsouza**  
 🎓 3rd Year B.Tech. in Computer Science Engineering  
 🏫 NMAM Institute of Technology  
-💼 Intern @ **Thaniya Technologies** 🔗 [LinkedIn](https://linkedin.com/in/fragan-dsouza) | 🔗 [GitHub](https://github.com/fragan7dsouza)
+💼 Intern @ **Thaniya Technologies** <br>
+🔗 [LinkedIn](https://linkedin.com/in/fragan-dsouza) | 🔗 [GitHub](https://github.com/fragan7dsouza)
 
 ### **Hariharanath**  
 🎓 3rd Year B.Tech. in Computer Science & Engineering (Full Stack Development)  
