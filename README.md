@@ -107,10 +107,15 @@ python verify_integrity.py
 
 ---
 
-## 👨‍💻 **Author**
+## 👨‍💻 **Authors**
 
-**Fragan Dsouza** 📍 3rd year CSE — NMAM Institute of Technology
-**Hariharanath** 📍 3rd year CSE-FSD — NMAM Institute of Technology
+### **Fragan Dsouza**  
+🎓 3rd Year B.E. in Computer Science Engineering  
+🏫 NMAM Institute of Technology  
+
+### **Hariharanath**  
+🎓 3rd Year B.E. in Computer Science & Engineering (Full Stack Development)  
+🏫 NMAM Institute of Technology  
 
 💼 Intern @ **Thaniya Technologies** 🔗 [LinkedIn](https://linkedin.com/in/fragan-dsouza) | 🔗 [GitHub](https://github.com/fragan7dsouza)
 
