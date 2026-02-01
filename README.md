@@ -117,6 +117,10 @@ python verify_integrity.py
 🎓 3rd Year B.E. in Computer Science & Engineering (Full Stack Development)  
 🏫 NMAM Institute of Technology  
 
+### **Pratham B Shetty**  
+🎓 3rd Year B.E. in Computer Science & Engineering (Full Stack Development)  
+🏫 NMAM Institute of Technology  
+
 💼 Intern @ **Thaniya Technologies** 🔗 [LinkedIn](https://linkedin.com/in/fragan-dsouza) | 🔗 [GitHub](https://github.com/fragan7dsouza)
 
 ---
