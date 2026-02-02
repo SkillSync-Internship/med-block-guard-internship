@@ -32,7 +32,7 @@ export default function DashboardPage() {
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
 
-  // Fetch ledger data from backend
+  
   const fetchLedger = async () => {
     try {
       const res = await fetch("http://127.0.0.1:8000/all-trials");
@@ -54,7 +54,7 @@ export default function DashboardPage() {
     return () => clearInterval(interval);
   }, []);
 
-  // Filter trials based on search query
+
   const filteredTrials = useMemo(() => {
     const entries = Object.entries(ledgerData);
     if (!searchQuery.trim()) return entries;
@@ -66,7 +66,7 @@ export default function DashboardPage() {
     );
   }, [ledgerData, searchQuery]);
 
-  // Statistics
+
   const stats = useMemo(() => {
     const entries = Object.entries(ledgerData);
     const total = entries.length;
@@ -78,7 +78,7 @@ export default function DashboardPage() {
     return { total, verified, tampered, highRisk };
   }, [ledgerData]);
 
-  // Export to CSV
+
   const exportToCSV = () => {
     const headers = ["NCT ID", "Title", "Hash", "Bias Risk", "Status"];
     const rows = Object.entries(ledgerData).map(([id, trial]) => [
@@ -98,14 +98,14 @@ export default function DashboardPage() {
     link.click();
   };
 
-  // Copy hash to clipboard
+  
   const copyToClipboard = async (text: string) => {
     await navigator.clipboard.writeText(text);
   };
 
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* Header */}
+      
       <header className="border-b border-white/10 px-8 py-6">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center justify-between">
@@ -136,7 +136,7 @@ export default function DashboardPage() {
       </header>
 
       <div className="mx-auto max-w-7xl px-8 py-8">
-        {/* Statistics Cards */}
+      
         <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <Card className="border-white/10 bg-white/5">
             <CardHeader className="pb-2">
@@ -182,7 +182,7 @@ export default function DashboardPage() {
           </Card>
         </div>
 
-        {/* Search and Actions Bar */}
+      
         <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="relative max-w-md flex-1">
             <Input
@@ -204,7 +204,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Error State */}
+      
         {error && (
           <Card className="mb-6 border-red-500/50 bg-red-500/10">
             <CardContent className="py-4">
@@ -213,14 +213,14 @@ export default function DashboardPage() {
           </Card>
         )}
 
-        {/* Loading State */}
+        
         {isLoading && (
           <div className="flex items-center justify-center py-12">
             <div className="h-8 w-8 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
           </div>
         )}
 
-        {/* Trials Table */}
+        
         {!isLoading && (
           <Card className="border-white/10 bg-white/5">
             <CardContent className="p-0">
@@ -312,7 +312,7 @@ export default function DashboardPage() {
           </Card>
         )}
 
-        {/* Footer */}
+        
         <footer className="mt-8 border-t border-white/10 pt-6 text-center text-sm text-gray-500">
           <p>
             Med-Block-Guard &copy; {new Date().getFullYear()} — Blockchain-backed
