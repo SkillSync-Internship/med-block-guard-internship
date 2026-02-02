@@ -129,6 +129,7 @@ python verify_integrity.py
 🎓 3rd Year B.Tech. in Computer Science & Engineering (Full Stack Development)  
 🏫 NMAM Institute of Technology <br>
 💼 Intern @ **Thaniya Technologies**
+🔗 [LinkedIn](https://www.linkedin.com/in/-anup-c-/) | 🔗 [GitHub](https://github.com/CodeAnup)
 
 ---
 
