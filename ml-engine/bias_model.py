@@ -10,17 +10,14 @@ def calculate_bias_score():
 
     df = pd.read_csv(CSV_PATH)
     
-    # using the columns identified in your terminal output
     min_col = 'min_age'
 
     def get_risk(row):
         score = 0
         try:
             val = float(row[min_col])
-            # bias check: trials excluding everyone under 30 (often excludes child-bearing age)
             if val > 30:
                 score += 40
-            # bias check: pediatric-only (very specific demographic)
             if val < 18:
                 score += 20
         except:
