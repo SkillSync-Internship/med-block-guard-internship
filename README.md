@@ -1,44 +1,43 @@
+## **Med-Block-Guard: Clinical Trial Integrity System**
 
-# 🛡️ **Med-Block-Guard: Clinical Trial Integrity System**
-
-An advanced machine learning and blockchain-integrated system designed to ensure the authenticity and integrity of academic and clinical research texts. This project serves as a security layer to classify data as **Human-written** or **AI-generated** before anchoring it to an immutable ledger.
+An advanced machine learning and blockchain-integrated system designed to ensure the authenticity and integrity of clinical research data. This project serves as a security layer to classify clinical trial records for recruitment bias and data quality before anchoring them to an immutable ledger.
 
 **Developed as part of a Blockchain Development Internship at Thaniya Technologies.**
 
 ---
 
-## 🔥 **Project Overview**
+## **Project Overview**
 
-This project utilizes a **Logistic Regression** model trained on a massive dataset (~500k rows) to identify linguistic patterns, word frequencies, and structural nuances. Once a text is analyzed for authenticity, its cryptographic fingerprint (**SHA-256**) is secured within a local blockchain-simulated ledger.
+This project utilizes a **Logistic Regression** model trained on clinical metadata to identify patterns of recruitment bias, specifically focusing on demographic skews in age and gender. Once the data is analyzed for ethical integrity, its cryptographic fingerprint (**SHA-256**) is secured within a local blockchain-simulated ledger to prevent unauthorized tampering.
 
 ### **Key Features**
 
-* **Real-time ML Analysis:** Instant classification of academic text using a trained Scikit-Learn backend.
-* **Probabilistic Results:** Provides a confidence percentage for every human vs. AI verdict.
-* **Blockchain Integrity:** Secured by a FastAPI middleware that monitors data tampering via SHA-256 hashing.
-* **Minimalist Dashboard:** A clean, high-contrast UI (Teal/White/Grey) for monitoring system-wide data integrity.
-* **Privacy-Focused:** Fully local processing with no clinical data leaving the local server.
+* **Real-time Bias Analysis:** Instant classification of clinical trial eligibility criteria using a trained Scikit-Learn backend.
+* **Integrity Audit Scores:** Provides a risk percentage for every trial based on demographic inclusivity.
+* **Blockchain Integrity:** Secured by a FastAPI middleware that monitors data tampering via SHA-256 hashing and world-state verification.
+* **Security Dashboard:** A clean, high-contrast UI for monitoring system-wide data integrity and tamper alerts.
+* **Privacy-Focused:** Fully local processing with no sensitive clinical data leaving the secure local server.
 
 ---
 
-## 🚀 **Tech Stack**
+## **Tech Stack**
 
 ### **Backend & ML**
 
 * **Python 3.12**: Core logic, data processing, and model execution.
 * **FastAPI**: High-performance REST API for model serving and ledger management.
-* **Scikit-Learn**: Implementation of Logistic Regression and TF-IDF Vectorization.
+* **Scikit-Learn**: Implementation of Logistic Regression and TF-IDF Vectorization for bias detection.
 * **Joblib**: Model serialization for rapid loading and prediction.
 
 ### **Frontend & Dashboard**
 
-* **Vanilla HTML5**: Structure for the security monitoring dashboard.
-* **Minimalist CSS3**: Custom teal, grey, and white styling without external frameworks.
-* **Vanilla JavaScript**: Real-time data fetching and dynamic UI updates via the Fetch API.
+* **Next.js 15**: Modern React framework for optimized data fetching and dashboard management.
+* **Tailwind CSS**: Utility-first CSS framework for high-contrast integrity status visualization.
+* **Vanilla JavaScript**: Real-time data fetching and dynamic UI updates for tamper detection alerts.
 
 ---
 
-## 📦 **Project Structure**
+## **Project Structure**
 
 ```text
 Med-Block-Guard/
@@ -53,18 +52,18 @@ Med-Block-Guard/
 │   ├── main.py             # API server with CORS and Hashing logic
 │   ├── ledger.json         # Local persistent data ledger
 │   ├── verify_integrity.py # Tamper detection script
-│   └── dashboard.html      # Minimalist security monitor
+│   └── dashboard.html      # Security monitor interface
 │
-├── blockchain/             # Infrastructure (Fabric/Docker)
-└── data/                   # Clinical trial datasets
+├── blockchain/             # Infrastructure (Smart Contracts/Docker)
+└── data/                   # ClinicalTrials.gov datasets
 
 ```
 
 ---
 
-## 🧠 **ML Implementation**
+## **ML Implementation**
 
-The model utilizes **TF-IDF Vectorization** with an `ngram_range` of (1, 2) to capture both individual words and common phrasing patterns.
+The model utilizes **TF-IDF Vectorization** to process eligibility criteria text from clinical trials. By identifying keywords that correlate with selection bias—such as overly restrictive age caps or exclusionary health histories—the system assigns an audit score to ensure representative science.
 
 **Training the Model:**
 
@@ -74,11 +73,11 @@ python train_model.py
 
 ```
 
-The system performs class balancing to ensure the detector provides an unbiased result for academic research verification.
+The system performs class balancing to ensure the detector provides an unbiased result for diverse clinical research verification.
 
 ---
 
-## 🛠️ **Installation & Setup**
+## **Installation & Setup**
 
 ### **1. Backend & API**
 
@@ -107,32 +106,54 @@ python verify_integrity.py
 
 ---
 
-## 👨‍💻 **Authors**
+## **Authors**
 
 ### **Fragan Dsouza**  
+
 🎓 3rd Year B.Tech. in Computer Science Engineering  
+
 🏫 NMAM Institute of Technology  
+
 💼 Intern @ **Thaniya Technologies** <br>
+
 🔗 [LinkedIn](https://linkedin.com/in/fragan-dsouza) | 🔗 [GitHub](https://github.com/fragan7dsouza)
 
+
+
 ### **Hariharanath**  
+
 🎓 3rd Year B.Tech. in Computer Science & Engineering (Full Stack Development)  
+
 🏫 NMAM Institute of Technology  
+
 💼 Intern @ **Thaniya Technologies**
+
+
 
 ### **Pratham B Shetty**  
+
 🎓 3rd Year B.Tech. in Computer Science & Engineering (Full Stack Development)  
+
 🏫 NMAM Institute of Technology  
+
 💼 Intern @ **Thaniya Technologies**
 
+
+
 ### **Anup C**  
+
 🎓 3rd Year B.Tech. in Computer Science & Engineering (Full Stack Development)  
+
 🏫 NMAM Institute of Technology <br>
-💼 Intern @ **Thaniya Technologies**
+
+💼 Intern @ **Thaniya Technologies** <br>
+
+🔗 [LinkedIn](https://www.linkedin.com/in/-anup-c-/) | 🔗 [GitHub](https://github.com/CodeAnup)
+
 
 ---
 
-## 📜 **License**
+## **License**
 
 This project is open-source under the **MIT License**.
 
