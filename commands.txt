@@ -1,0 +1,12 @@
+.\venv\Scripts\activate
+
+ml-engine/
+python bias_model.py
+
+
+middleware/
+uvicorn main:app --reload
+
+middleware/
+python upload_trials.py
+python verify_integrity.py
